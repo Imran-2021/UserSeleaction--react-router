@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react';
+import { Link } from 'react-router-dom';
 
 const Users = (props) => {
     const [user,setUser]=useState([])
@@ -24,9 +25,9 @@ const ALlUser=(props)=>{
     const {name,username,email,website,id}=props.user;
     return(
         <div style={{margin:"10px",padding:"10px",border: "1px solid red"}}>
-            <p>Id :- {id}</p>
             <p>Name :- {name}</p>
             <p>Email :-{email}</p>
+            <Link to={"/userDetails/"+id}><button>More about - {name}</button></Link>
         </div>
     )
 }
