@@ -12,7 +12,7 @@ function App() {
     <Router>
       <Switch>
           <Route path="/users">
-            <Users />
+          <Users/>
           </Route>
           <Route exact path="/">
             <Users />
